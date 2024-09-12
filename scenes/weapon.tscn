@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://be8qklt3ctqnm"]
+
+[ext_resource type="Script" path="res://Weapon.gd" id="1_qdq67"]
+[ext_resource type="Texture2D" uid="uid://1c8p18tidgvb" path="res://assets/kenney_roguelike-characters/Spritesheet/roguelikeChar_transparent.png" id="2_v4s8r"]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource("1_qdq67")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_v4s8r")
+region_enabled = true
+region_rect = Rect2(902, 69, 5, 15)
+
+[node name="Hitbox" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Hitbox"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
